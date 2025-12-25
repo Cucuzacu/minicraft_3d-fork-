@@ -18,6 +18,7 @@ sudo apt-get install -y \
 # 2) Install devkitPro using official installer (non-interactive)
 if [ ! -d "/opt/devkitpro" ]; then
   echo "[2/5] Installing devkitPro..."
+  export DEBIAN_FRONTEND=noninteractive
   curl -fsSL https://apt.devkitpro.org/install-devkitpro-pacman | sudo -E bash -s -- --noconfirm
 else
   echo "[2/5] devkitPro already installed"
